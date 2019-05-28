@@ -24,9 +24,7 @@
 		$AirTravelersInfo = $nodo->AirAvail->AirTravelersInfo;
 		$AirItineraries  = $nodo->AirAvail->AirItineraries->AirItinerary;
 		$AirPricingGroups = $nodo->AirAvail->AirPricingGroups;
-		echo "End ============================== End ";
-
-
+		
 		/*NO SE USA 
 		foreach ($AirTravelersInfo as $id => $val) {
 			var_dump($id);
@@ -61,8 +59,6 @@
 				$data_json['flights'][$count]['journey']['departure']['airport']['code'] = (string) $valLeg->AirItineraryLeg[$count]->DepartureAirportLocationCode; 
 				$fecha =  date('Y-m-d' , strtotime($valLeg->AirItineraryLeg[$count]->DepartureDateTime));
 				$hora =  date('H:i:s' , strtotime($valLeg->AirItineraryLeg[$count]->DepartureDateTime));
-				echo ($fecha);
-				echo ($hora);
 				$data_json['flights'][$count]['journey']['departure']['date']['fecha'] = $fecha ;  
 				$data_json['flights'][$count]['journey']['departure']['date']['hora'] =  $hora;  
 				$data_json['flights'][$count]['journey']['departure']['terminal'] = (string)$valLeg->AirItineraryLeg[$count]->DepartureAirportTerminal; 
@@ -74,31 +70,50 @@
 				
 				$count ++;
 			}
-			echo "<pre>";
+			/*echo "<pre>";
 				print_r($data_json);
 				echo "</pre>";
-			echo "--------------------------------";
+			echo "--------------------------------";*/
 		}
-		var_dump($data_json);
-		die();
+		$cont_group = count($AirPricingGroups->AirPricingGroup);
+		$cont_group_options = 0;		
 		foreach ($AirPricingGroups->AirPricingGroup as $id => $val) {
-			var_dump('id',$id);			
-			var_dump($val);	
-			echo "AirPricingGroups ==============================AirPricingGroups";
+			$id = (string)$val->PricingGroupID;
+			$AdultTicketAmount = (string)$val->AdultTicketAmount;
+			$ChildrenTicketAmount = (string)$val->ChildrenTicketAmount;
+			$InfantTicketAmount = (string)$val->InfantTicketAmount;
+			$AdultTaxAmount = (string)$val->AdultTaxAmount;
+			$ChildrenTaxAmount = (string)$val->ChildrenTaxAmount;
+			$InfantTaxAmount = (string)$val->InfantTaxAmount;
+			$AgencyFeeAmount = (string)$val->AgencyFeeAmount;
+			$AramixFeeAmount = (string)$val->AramixFeeAmount;
+			$DiscountAmount = (string)$val->DiscountAmount;
+			$LastTicketDate = (string)$val->LastTicketDate;
+			$FareNotes[] = $val->FareNotes;
+			$AirPricingGroupOption[] = $val->AirPricingGroupOptions;
+
+			$data_json['grupo_precios'][$id]['id'] = $id ;
+			$data_json['grupo_precios'][$id]['AdultTicketAmount'] = $AdultTicketAmount ;
+			$data_json['grupo_precios'][$id]['ChildrenTicketAmount'] = $ChildrenTicketAmount ;
+			$data_json['grupo_precios'][$id]['InfantTicketAmount'] = $InfantTicketAmount ;
+			$data_json['grupo_precios'][$id]['AdultTaxAmount'] = $AdultTaxAmount ;
+			$data_json['grupo_precios'][$id]['ChildrenTaxAmount'] = $ChildrenTaxAmount ;
+			$data_json['grupo_precios'][$id]['InfantTaxAmount'] = $InfantTaxAmount ;
+			$data_json['grupo_precios'][$id]['AgencyFeeAmount'] = $AgencyFeeAmount ;
+			$data_json['grupo_precios'][$id]['AramixFeeAmount'] = $AramixFeeAmount ;
+			$data_json['grupo_precios'][$id]['DiscountAmount'] = $DiscountAmount ;
+			$data_json['grupo_precios'][$id]['LastTicketDate'] = $LastTicketDate ;
+			$data_json['grupo_precios'][$id]['notes'] = $FareNotes ;
+			$data_json['grupo_precios'][$id]['AirPricingGroupOption'] = $AirPricingGroupOption ;
+
+		echo "<pre>";
+		print_r($data_json['grupo_precios'][$id]);
+		echo "</pre>";
+		echo "AirPricingGroups ==============================AirPricingGroups";
 		}
 		
-		if($count > 5)
-			die();
-		echo 'ID : '. $RequestID;
 	}
-	die();
-	var_dump($results);
-
 	
-	 
-	echo PHP_EOL."End ==============================".PHP_EOL.PHP_EOL;
-
-
 
 ?>
 	
