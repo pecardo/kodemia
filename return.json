@@ -1,0 +1,23 @@
+﻿{"count":2,"flights":
+		[
+			{"journeys":
+		[
+			{"journey":3,"airlines":
+				[
+					{"code":"AV"}],"departure":{"airport":{"code":"MAD"},"date":"2018-09-12","time":"09:05"},"arrival":{"airport":{"code":"MEX"},"date":"2018-09-13","time":"03:50"},"duration":{"hours":25,"minutes":45},"segments":
+					[
+						{"type":"flight","departure":{"airport":{"code":"MAD","terminal":"4S"},"date":"2018-09-12","time":"09:05"},"arrival":{"airport":{"code":"BOG","terminal":"1"},"date":"2018-09-12","time":"12:12"},"isNightly":false,"duration":{"hours":1,"minutes":53},"flightNumber":"27","aircraft":"788","airline":{"code":"AV"},"operatingAirline":{"code":"AV"},"class":{"code":"U","type":"M"}},{"type":"scale","changeTerminal":false,"isNightly":false,"duration":{"hours":10,"minutes":48}},{"type":"flight","departure":{"airport":{"code":"BOG","terminal":"1"},"date":"2018-09-12","time":"23:00"},"arrival":{"airport":{"code":"MEX","terminal":"1"},"date":"2018-09-13","time":"03:50"},"isNightly":true,"duration":{"hours":2,"minutes":50},"flightNumber":"44","aircraft":"320","airline":{"code":"AV"},"operatingAirline":{"code":"AV"},"class":{"code":"U","type":"M"}}],"scale":1},{"journey":2,"airlines":
+					[
+						{"code":"AV"}],"departure":{"airport":{"code":"MEX"},"date":"2018-09-30","time":"08:05"},"arrival":{"airport":{"code":"MAD"},"date":"2018-10-01","time":"12:00"},"duration":{"hours":20,"minutes":55},"segments":
+					[
+						{"type":"flight","departure":{"airport":{"code":"MEX","terminal":"1"},"date":"2018-09-30","time":"08:05"},"arrival":{"airport":{"code":"BOG","terminal":"1"},"date":"2018-09-30","time":"12:39"},"isNightly":false,"duration":{"hours":6,"minutes":34},"flightNumber":"45","aircraft":"320","airline":{"code":"AV"},"operatingAirline":{"code":"AV"},"class":{"code":"U","type":"M"}},{"type":"scale","changeTerminal":false,"isNightly":false,"duration":{"hours":6,"minutes":41}},{"type":"flight","departure":{"airport":{"code":"BOG","terminal":"1"},"date":"2018-09-30","time":"19:20"},"arrival":{"airport":{"code":"MAD","terminal":"4S"},"date":"2018-10-01","time":"12:00"},"isNightly":true,"duration":{"hours":21,"minutes":40},"flightNumber":"46","aircraft":"788","airline":{"code":"AV"},"operatingAirline":{"code":"AV"},"class":{"code":"U","type":"M"}}],"scale":1}],"option":{"price":{"amount":2031.6,"currency":"EUR"}}},{"journeys":
+							[
+						{"journey":4,"airlines":
+					[
+						{"code":"IB"}],"departure":{"airport":{"code":"MAD"},"date":"2018-09-12","time":"10:00"},"arrival":{"airport":{"code":"MEX"},"date":"2018-09-12","time":"14:35"},"duration":{"hours":11,"minutes":35},"segments":
+					[
+						{"type":"flight","departure":{"airport":{"code":"MAD","terminal":"4S"},"date":"2018-09-12","time":"10:00"},"arrival":{"airport":{"code":"MEX","terminal":"1"},"date":"2018-09-12","time":"14:35"},"isNightly":false,"duration":{"hours":2,"minutes":25},"flightNumber":"6405","aircraft":"346","airline":{"code":"IB"},"operatingAirline":{"code":"IB"},"class":{"code":"Q","type":"M"}}],"scale":0},{"journey":4,"airlines":
+					[
+						{"code":"IB"}],"departure":{"airport":{"code":"MEX"},"date":"2018-09-30","time":"12:50"},"arrival":{"airport":{"code":"MAD"},"date":"2018-10-01","time":"06:25"},"duration":{"hours":10,"minutes":35},"segments":
+					[
+						{"type":"flight","departure":{"airport":{"code":"MEX","terminal":"1"},"date":"2018-09-30","time":"12:50"},"arrival":{"airport":{"code":"MAD","terminal":"4S"},"date":"2018-10-01","time":"06:25"},"isNightly":true,"duration":{"hours":0,"minutes":35},"flightNumber":"6400","aircraft":"345","airline":{"code":"IB"},"operatingAirline":{"code":"IB"},"class":{"code":"Q","type":"M"}}],"scale":0}],"option":{"price":{"amount":2142.6,"currency":"EUR"}}}]}
