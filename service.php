@@ -36,13 +36,13 @@
 		}*/
 
 		foreach ($AirItineraries as $id => $val) {
-			$data_json['flights'][$count]['id'] = ( $val->AirItinerary->ItineraryID); 
-			$data_json['flights'][$count]['salida'] = json_encode($val->AirItinerary->DepartureDateTime); 
-			$data_json['flights'][$count]['llegada'] = json_encode($val->AirItinerary->ArrivalDateTime); 
-			$data_json['flights'][$count]['lugar_llegada'] = json_encode($val->AirItinerary->ArrivalAirportLocationCode); 
-			$data_json['flights'][$count]['lugar_salida'] = json_encode(trim($val->AirItinerary->DepartureAirportLocationCode));
-			$data_json['flights'][$count]['duration']['hours'] = json_encode($val->AirItinerary->TotalDuration);
-			$data_json['flights'][$count]['scalas'] = json_encode($val->AirItinerary->SegmentNumber);
+			$data_json['flights'][$count]['id'] = ( $val->ItineraryID); 
+			$data_json['flights'][$count]['salida'] = json_encode($val->DepartureDateTime); 
+			$data_json['flights'][$count]['llegada'] = json_encode($val->ArrivalDateTime); 
+			$data_json['flights'][$count]['lugar_llegada'] = json_encode($val->ArrivalAirportLocationCode); 
+			$data_json['flights'][$count]['lugar_salida'] = json_encode(trim($val->DepartureAirportLocationCode));
+			$data_json['flights'][$count]['duration']['hours'] = json_encode($val->TotalDuration);
+			$data_json['flights'][$count]['scalas'] = json_encode($val->SegmentNumber);
 			
 
 
